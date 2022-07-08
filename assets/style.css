@@ -13,6 +13,7 @@ my favorite font!
     --secondary:#CCCCFF;
 
 
+
 }
 body{
     font-family: 'Roboto Mono', monospace;
@@ -27,7 +28,7 @@ a{
 
 
 
-*>*
+* > *
 {
     box-sizing: border-box;
 }
@@ -62,7 +63,7 @@ a{
     font-size: 40px;
     color:#0B3077;
 }
-.collpase
+.collapse
 {
     align-self: center;
 }
@@ -81,15 +82,15 @@ a{
 .search-box
 {
     display: inline;
-    border-right: 1px solid;
+    border-right: 1px solid #0B3077;
 
-    padding-right:10px;
+    padding-right: 10px;
     margin-right: 10px;
 }
 
 .toggle-button
 {
-    font-size:21px;
+    font-size: 21px;
     background-color:transparent;
     border:none;
     position: absolute;
@@ -107,12 +108,7 @@ a{
 
 /*media quer*/
 
-@media(max-width: 574px){
-    .toggle-button
-    {
-        display: initial;
-    }
-}
+
 
 @media(max-width: 992px){
     .navbar
@@ -120,11 +116,20 @@ a{
         flex-direction: column;
     }
 
-    .collpase{
+    
+}
+@media(max-width: 574px){
+    .toggle-button
+    {
+        display: initial;
+    }
+    .collapse{
         max-height: 0;
         overflow: hidden;
+    
+
     }
-    .collpase.nav-link{
+    .collapse.nav-link{
         display:block;
         text-align: center;
     }
