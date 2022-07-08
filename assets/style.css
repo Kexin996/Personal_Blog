@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Mono:wght@600&display=swap');
+
+
+
+/*
+my favorite font!
+*/
+/*root style*/
+
+
+:root{
+    --light:#EBFAF9;
+    --secondary:#CCCCFF;
+
+
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+    padding: 0;
+    margin:0;
+}
+
+/*global style*/
+a{
+    text-decoration: none;
+}
+
+
+
+*>*
+{
+    box-sizing: border-box;
+}
+.text-light{
+    color:var(--light);
+}
+.bg-light
+{
+    background-color: var(--light);
+}
+
+.container
+{
+    max-width: 1400px;
+    padding: 0 15px;
+    margin:auto;
+}
+
+/*section style*/
+.navbar{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+.nav-brand
+{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    align-self: center;
+    font-size: 40px;
+    color:#0B3077;
+}
+.collpase
+{
+    align-self: center;
+}
+.nav-link
+{
+    font-size: 18px;
+    margin:15px;
+    color:#0B3077;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.nav-link:hover{
+    color:#87ACF2;
+}
+.search-box
+{
+    display: inline;
+    border-right: 1px solid;
+
+    padding-right:10px;
+    margin-right: 10px;
+}
+
+.toggle-button
+{
+    font-size:21px;
+    background-color:transparent;
+    border:none;
+    position: absolute;
+    right: 0;
+    margin:8px 10px;
+    display: none;
+
+}
+
+.toggle-button:focus
+{
+    outline: none;
+}
+/*menu*/
+
+/*media quer*/
+
+@media(max-width: 574px){
+    .toggle-button
+    {
+        display: initial;
+    }
+}
+
+@media(max-width: 992px){
+    .navbar
+    {
+        flex-direction: column;
+    }
+
+    .collpase{
+        max-height: 0;
+        overflow: hidden;
+    }
+    .collpase.nav-link{
+        display:block;
+        text-align: center;
+    }
+    .search-box
+    {
+        border-right:none;
+    }
+    .collapse-toggle
+    {
+        max-height: 500px;
+
+    }
+}
