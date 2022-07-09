@@ -9,25 +9,25 @@ my favorite font!
 
 
 :root{
-    --light:#EBFAF9;
-    --text_color:#0B3077;
-
-
-
+    --heading:#7a5bcd;
+    --text_color:#ffdfdf;
+    --button:#614eae;
 }
 body{
     font-family: 'Roboto Mono', monospace;
     padding: 0;
     margin:0;
+    background-color: #674AB3;
+    ;
 }
 
 .text-color{
     color: var(--text_color);
 }
 
-.text-light{
+.text-heading{
 
-    color: var(--light);
+    color: var(--heading);
 }
 /*global style*/
 a{
@@ -40,12 +40,10 @@ a{
 {
     box-sizing: border-box;
 }
-.text-light{
-    color:var(--light);
-}
+
 .bg-light
 {
-    background-color: var(--light);
+    background-color: var(--heading);
 }
 
 .container
@@ -60,13 +58,61 @@ a{
     width: 100%;
 }
 
+.text-title
+{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color:var(--text_color);
+}
+
+.secondary-title
+{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.display-1
+{
+    font-size: 24px;
+}
+
+.display-2
+{
+    font-size:16px;
+}
+
+.display-3
+{
+    font-size:14px;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.text-right
+{
+    text-align: right;
+}
+
+.btn{
+    padding: 20px 30px;
+
+}
+
+.btn-primary
+{
+    border-radius: 5px;
+    background-color: var(--button);
+}
+
 /*section style*/
 .navbar{
     position: relative;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
 }
 .nav-brand
 {
@@ -74,7 +120,7 @@ a{
     font-weight: bold;
     align-self: center;
     font-size: 40px;
-    color:#0B3077;
+    color:var(--text_color);
 }
 .collapse
 {
@@ -82,20 +128,20 @@ a{
 }
 .nav-link
 {
-    font-size: 18px;
+    font-size: 20px;
     margin:15px;
-    color:#0B3077;
+    color:var(--text_color);
     font-family: 'Roboto Mono', monospace;
 
 }
 
 .nav-link:hover{
-    color:#87ACF2;
+    color:#ffffff;
 }
 .search-box
 {
     display: inline;
-    border-right: 1px solid #0B3077;
+    border-right: 1px solid var(--text_color);
 
     padding-right: 10px;
     margin-right: 10px;
@@ -137,8 +183,8 @@ a{
 }
 .grid .grid-item
 {
-    width: cal(33.3333% -20px);
-
+    width: calc(33.3333%);
+    margin-bottom: 3em;
 }
 
 /*media quer*/
@@ -152,6 +198,15 @@ a{
     }
 
     
+}
+
+@media(max-width: 768px)
+{
+    .grid .grid-item
+    {
+    width: calc(50%);
+    margin-bottom: 3em;
+    }
 }
 @media(max-width: 574px){
     .toggle-button
@@ -176,5 +231,10 @@ a{
     {
         max-height: 500px;
 
+    }
+    .grid .grid-item
+    {
+    width: calc(100%);
+    margin-bottom: 3em;
     }
 }
