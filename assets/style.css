@@ -10,7 +10,7 @@ my favorite font!
 
 :root{
     --light:#EBFAF9;
-    --secondary:#CCCCFF;
+    --text_color:#0B3077;
 
 
 
@@ -21,6 +21,14 @@ body{
     margin:0;
 }
 
+.text-color{
+    color: var(--text_color);
+}
+
+.text-light{
+
+    color: var(--light);
+}
 /*global style*/
 a{
     text-decoration: none;
@@ -45,6 +53,11 @@ a{
     max-width: 1400px;
     padding: 0 15px;
     margin:auto;
+}
+
+.img-fluid
+{
+    width: 100%;
 }
 
 /*section style*/
@@ -104,7 +117,29 @@ a{
 {
     outline: none;
 }
-/*menu*/
+/*navigation menu*/
+
+/*main section*/
+
+#site-main{
+    margin-top:8em;
+
+}
+
+#posts
+{
+    margin-bottom: 5em;
+}
+
+.grid
+{
+    margin:0 auto;
+}
+.grid .grid-item
+{
+    width: cal(33.3333% -20px);
+
+}
 
 /*media quer*/
 
@@ -126,7 +161,7 @@ a{
     .collapse{
         max-height: 0;
         overflow: hidden;
-    
+        transition: all 0.8s cubic-bezier(0.59, 0.22, 0.16, 0.83);
 
     }
     .collapse.nav-link{
