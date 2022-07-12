@@ -7,15 +7,15 @@ toggle.addEventListener('click',function(){
 
 // with masonry
 new Masonry("#posts .grid",{
-    ItemSelector:".grid-item",
+    itemSelector:".grid-item",
     gutter:20
 });
 
 // swiper library initialization
 new Swiper(".swiper-container",{
-    direction:"horizontal",
-    loop:true,
-    slidesPerView:5,
+    direction: 'horizontal',
+    slidesPerView: 2,
+    loop: true,
     autoplay:
     {
         delay:3000
