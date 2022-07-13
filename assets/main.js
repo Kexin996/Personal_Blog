@@ -11,13 +11,3 @@ new Masonry("#posts .grid",{
     gutter:20
 });
 
-// swiper library initialization
-new Swiper(".swiper-container",{
-    direction: 'horizontal',
-    slidesPerView: 2,
-    loop: true,
-    autoplay:
-    {
-        delay:3000
-    }
-})
