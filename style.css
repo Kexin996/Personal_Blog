@@ -25,9 +25,10 @@ body{
 .text-color{
     color: var(--text_color);
 }
-
+.text-center{
+    text-align: center;
+  }
 .text-heading{
-
     color: var(--heading);
 }
 /*global style*/
@@ -39,6 +40,8 @@ a{
     color: var(--text_color);
     font-family: 'Roboto Mono', monospace;
 }
+
+
 
 
 
@@ -98,6 +101,16 @@ a{
 .display-3
 {
     font-size:14px;
+}
+
+.normal-title
+{
+    font-size:60px;
+}
+
+.tab { 
+    display:inline-block; 
+    margin-left: 40px; 
 }
 
 .text-center
@@ -236,7 +249,7 @@ a{
 }
 .nav-link
 {
-    font-size: 20px;
+    font-size: 25px;
     margin:15px;
     color:var(--text_color);
     font-family: 'Roboto Mono', monospace;
