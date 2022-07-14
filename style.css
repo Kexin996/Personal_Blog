@@ -420,6 +420,7 @@ a{
 @media(max-width: 574px){
     .toggle-button
     {
+        
         display: initial;
     }
     .collapse{
