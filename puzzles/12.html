@@ -62,7 +62,7 @@
             <article id = "post">
                 <div class="text-heading text-center">
                     <div class="title normal-title text-color">
-                        Puzzle #2
+                        Puzzle #12
                     </div>
                     <div class="title">
                         <h2 class="text-title text-color display-2">
@@ -75,7 +75,7 @@
                             <i class = "fas fa-user text-color"></i> Olivia
                         </a>
                         <a href="#" class = "link display-2 text-color px-1">
-                            <i class = "fas fa-clock text-color"></i> Jul 1, 2022
+                            <i class = "fas fa-clock text-color"></i> Jul 6, 2022
                         </a>
                         <a href="#" class = "link display-2 text-color px-1">
                             <i class = "fas fa-comments text-color"></i> 9999
@@ -98,7 +98,7 @@
                     <p>
                         Puzzle: <br><br>
                         &emsp;
-                        "You are given two glass jugs. Each contains the same volume, V , of liquid. One jug contains pure alcohol, and the other jug contains pure water. A modest quantity, Q, of water is poured from the water jug into the alcohol jug, which is then thoroughly mixed. The same modest quantity, Q, of (now diluted) alcohol is then poured back into the water jug to equalize the volumes of the jugs at their initial levels. The initial concentration of alcohol in the alcohol jug equals the initial concentration of water in the water jug (at 100%). What is the relationship between the final concentrations of alcohol in the alcohol jug and water in the water jug?"
+                        "There are two cities, A and B, 1,000 miles apart. You have 3,000 apples at City A, and you want to deliver as many as possible of them to City B. The only delivery method available is a truck. There are, however, two problems. The truck can hold at most only 1,000 apples, and if there are any apples at all in the truck, the hungry dishonest driver will steal and eat one apple for every mile he drives. What is the maximum number of apples you can deliver from City A to City B? Note that you are welcome to stop part way, dump off some apples, and then come back and pick them up later."
                         <br>
                         <br>
                         <br>
@@ -107,32 +107,48 @@
 
                     </p>
 
-                    <p>
                         Solution: <br>
                 </div>
                 <div class="content text-color display-1 secondary-title mt-3">
-                    - The concentration are the same. <br><br>
-                    - First, let us define what is quantity of solution:<br><br>
-                    &emsp;"The liquid measurement is the amount of liquid a vessel contains and its measurement in standard units. We also refer to it as the “capacity” or the “volume” of the vessel.
-                    the quantity of Q is still in liter units."<br><br>
-                    - what is concentration:<br><br>
-                    &emsp;"The concentration of a solution is a measure of the amount of solute that has been dissolved in a given amount of solvent or solution.
-                    If both are solvents, it can be decided by the ratio of volumes."<br><br>
-                    - With enough understanding of the problem, we take a look:<br>
-                    &emsp; - at first both are 100% concentration ---> the container contains pure water / alcohol.<br>
-                    &emsp; - after adding Q amount of water into alcohol ---> the concentration of alcohol becomes V / (Q+V). <br>
-                    &emsp; - even though we will pour back the water into the water jug, the concentration alcohol doesn't change ---> V / (Q+V) <br>
-                    &emsp; - Since the volume after pouring back and forth is the same, although without calculation, we don't actually know how much alcohol in alcohol container was replaced by water, we know: there must be a portion of alcohol moved to water jug,
-                    and we know: the alcohol cannot disappear.
-                    For water container, it will receive the portion of alcohol. <br><br>
-                    - And it has the same volume as alcohol container, so like alcohol container, it will lose the same ratio of water, giving it to the alcohol container.
-                    By symmetry, the concentration of water in water jug will also be V / (Q+V).<br><br>
+                    <p>
+                    *** this problem is quite interesting *** <br><br>
+                    - we know that there are two conditions for the distance with apples the driver drives:<br>
+                    &emsp;&emsp; - the truck can hold at most 1000 apples during driving <br>
+                    &emsp;&emsp; - the driver will eat an apple each time <br><br>
+                    - for the maximum apples we will deliver, we need to minimize the distances of delivering apples as much as possible and maximize the apples we load each time (1000 apples) <br><br>
+                    - there will be some drop point that we can dump the apples and pick them up later.<br>
+                    - The current drop point acts like that:
+                    <center>...drop point ——> drop point ——> drop point...</center><br>
+
+                    - There will be distance before the drop point and after the drop point.<br>
+                    &emsp;&emsp; - after the current drop point: we must carry apples, since we gonna "pick them up". <br>
+                    &emsp;&emsp;&emsp;&emsp; - Thus, for this distance, the truck can hold at most 1,000 apples and the driver will eat an apple each time. <br>
+                    &emsp;&emsp; - before the current drop point: we can either carry apples or not carry apples. <br>
+                    &emsp;&emsp;&emsp;&emsp; - There is no requirement, and since we want to minimize the distances of delivering apples, we choose not to carry any apple at all. <br><br>
+                    - Do we know the number of drop points? <br>
+                    &emsp;&emsp; - no. We only know that after the current drop point we must carry 1,000 apples, which means that the piles of apples at the drop point must be multiple of 1,000. <br><br>
+                    
+                    - Since the distance of carrying apples is the interval between drop points, the difference between the number of apples at two nearby drop points will be the apples eaten by driver.<br>
+                    &emsp;&emsp; - We don't want driver to eat a lot of apples, so we want the difference be 1000.<br>
+                    &emsp;&emsp; - Why? <br>
+                    &emsp;&emsp;&emsp;&emsp; - the amount eaten by the driver can only be multiples of 1000, since we want each pile to be multiples of 1000.<br>
+                    &emsp;&emsp;&emsp;&emsp; - the smallest multiple of 1000 eaten by the driver is also 1000.<br><br>
+                    
+                    - With those in mind, we know that we will have two drop points:<br>
+                    <center>3000(start) ---> 2000 ---> 1000 ---> left(end)</center><br>
+
+                    - Thus, we denote x as the distance from starting point to the first dropping point, and y be the distance between the first dropping point and the second dropping point.<br>
+                    <center>(3000 - x) * (3000 / 1000) = 2000, and x = 1000 / 3 = 333.3333... (our first point)</center>
+                    <center>(2000 - y) * (2000 / 1000) = 1000, y = 500 (second point).</center><br>
+                    - Thus, the number left = 333.3333+500 = 833 (rough).<br><br>
 
                     *** Note: I have written a simple code to generalize this problem. If you want to check, please
                     click on this link: <br>
-                    <a href="https://github.com/Kexin996/brainteaser/blob/master/july8.py" class = "nav-link">https://github.com/Kexin996/brainteaser/blob/master/july8.py</a>
+                    <a href="https://github.com/Kexin996/brainteaser/blob/master/july15.py" class = "nav-link">https://github.com/Kexin996/brainteaser/blob/master/july15.py</a>
+                    
                     </p>
                 </div>
+
             </article>
                 <!--post footer-->
 
@@ -156,7 +172,7 @@
                     <div class="row justify-content-center">
                         <div class="prev">
                             <div class="py-2">
-                                <a href="1.html" class="display-1 text-color">
+                                <a href="11.html" class="display-1 text-color">
                                     <i class="fas fa-chevron-left">
                                     </i>
                                     Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -166,7 +182,7 @@
                          </div>
                          <div class="next text-right">
                             <div class="py-2">
-                                <a href="3.html" class="display-1 text-color" style="float:right">
+                                <a href="13.html" class="display-1 text-color" style="float:right">
                                     &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
                                     <i class="fas fa-chevron-right"></i>
                                     

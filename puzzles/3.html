@@ -41,9 +41,9 @@
             <div class = "collapse">
                 <ul class = "navbar-nav">
                     <div class = "search-box">
-                        <a href = "#" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href = "/index.html" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
-                        <a href = "#" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href = "/puzzle.html" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href = "#" class = "nav-link"><i class="fa-brands fa-github"></i></a> 
                         <a href = "#" class = "nav-link"><i class="fa-brands fa-instagram"></i></a>
                         <a href = "#" class = "nav-link"><i class="fa-brands fa-weixin"></i></a>
@@ -107,16 +107,68 @@
 
                     </p>
 
-                    <p>
+                    
                         Solution: <br>
                 </div>
                 <div class="content text-color display-1 secondary-title mt-3">
-                    *** For this question, I have developed my own solution and sent to the author of 
+                    <p></p>
+
+
+
+
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                    *** For this question, I have developed my own solution and sent it to the author of 
                     "Heard on Wall Street". Hopefully it will appear in the latest version :D ***<br><br>
                     
                     - The keypoint is to find out the hidden relationship between space and time that most people may miss.<br><br>
-                    
 
+                    - We first denote different variables: <br>
+                    &emsp;&emsp;d<sub>1</sub>: the distance traveled by the escalator at the moment Fischer just
+                    arrived at the top. <br>
+
+                    &emsp;&emsp;d<sub>2</sub>: the distance traveled by the escalator at the moment Myron just
+                    arrived at the top. <br>
+
+                    &emsp;&emsp;D: the distance shown on the escalator at any moment. <br>
+
+                    &emsp;&emsp;v<sub>F</sub>: the velocity of Fisher.<br>
+                    &emsp;&emsp;v<sub>M</sub>: the velocity of Myron.<br>
+
+                    - We know that when Myron has arrived at the top, the distance on the escalator is:<br>
+                    <center>d<sub>1</sub>+25 = D<br></center>
+                    - When Fisher has reached the top:<br>
+                    <center>d<sub>2</sub>+20 = D<br></center>
+                    - Thus, we know the distance the escalator has travelled while Myron has stopped but Fischer walks is:<br>
+                    <center>d' = 5</center>
+                    &emsp;&emsp;***Why?: We just split the distances into people's distances and escalator's distance.
+                    Fisher only walks 25 steps, and Myron only walks 20 steps.
+                    D is constant at any time, so the difference 5 steps can only be the difference between 
+                    the distances of the escalator.<br><br>
+
+                    - At the same time, we know:<br>
+                    <center>v<sub>M</sub> : v<sub>F</sub> = 3:2</center>
+                    <center>d<sub>M</sub> : d<sub>F</sub> = 3:2, when the time t is the same </center>
+                    <center>d<sub>F</sub> = <sup>2</sup>&frasl;<sub>3</sub>d<sub>M</sub> </center>
+
+                    - We know that Myron has travelled 25 km, so based on the ratio, the actual distance Fischer has walked after
+                    Myron has reached the final point is:
+                    <center>20 - 25 * <sup>2</sup>&frasl;<sub>3</sub> = <sup>10</sup>&frasl;<sub>3</sub></center>
+
+                    - The time that the escalator continues to move is the same as that of Fischer has walked after Myron,
+                    and their velocities are constant. <br><br>
+                    - The ratio of their total distances will be the same as the ratio of the distances they 
+                    both move after Myron has stopped. <br>
+                    <center>d' : <sup>10</sup>&frasl;<sub>3 = d<sub>2</sub> : 20</center>
+
+                    - We solve it, and get d<sub>2</sub> = 30.<br><br>
+                    - If d<sub>2</sub> = 30, 
+                    <center>D = 30+20 = 50 steps.</center><br>
+
+                    *** Note: I have written a simple code to generalize this problem. If you want to check, please
+                    click on this link: <br>
+                    <a href="https://github.com/Kexin996/brainteaser/blob/master/july9.py" class = "nav-link">https://github.com/Kexin996/brainteaser/blob/master/july9.py</a>
                     </p>
                 </div>
             </article>
@@ -152,7 +204,7 @@
                          </div>
                          <div class="next text-right">
                             <div class="py-2">
-                                <a href="#" class="display-1 text-color" style="float:right">
+                                <a href="4.html" class="display-1 text-color" style="float:right">
                                     &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
                                     <i class="fas fa-chevron-right"></i>
                                     
@@ -173,7 +225,32 @@
 
     <!-- footer -->
     <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+              
+                    <h2 class = "footer-title third-title">About Me</h2>
+                    <div class="text-body">
+                        <p class = "display-1">
+                            More?
+                        </p>
+                        <address>
+                            <i class="fas fa-home-lg display-1"></i>
+                            Somewhere in NYC
+                        </address>
 
+                        <div class="phone">
+                            <i class="fas fa-phone display-1"></i>
+                            646-873-0726
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-at display-1"></i>
+                            kz2031@nyu.edu
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
         <!--copyright-->
         <div class="copyrights text-color">
             <p class="text-center text-secondary display-2">

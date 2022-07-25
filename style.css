@@ -133,7 +133,7 @@ a{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+
 }
 
 .text-right
@@ -245,6 +245,20 @@ a{
 
 }
 
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+
 /*section style*/
 .navbar{
     position: relative;
@@ -322,7 +336,7 @@ a{
 }
 .grid .grid-item
 {
-    width: calc(33.3333%);
+    width: calc(33.3333% - 20px);
     margin-bottom: 3em;
 }
 
