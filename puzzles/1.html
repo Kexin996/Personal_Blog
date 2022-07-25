@@ -30,11 +30,11 @@
             <!--click-->
             <div class = "collapse">
                 <ul class="navbar-nav">
-                    <a href = "#" class = "nav-link">Home</a>
-                    <a href = "#" class = "nav-link">Blog</a>
+                    <a href = "/index.html" class = "nav-link">Home</a>
+                    <a href = "/puzzle.html" class = "nav-link">Puzzles</a>
                     <a href = "#" class = "nav-link">Portfolio</a>
                     <a href = "#" class = "nav-link">Projects</a>
-                    <a href = "#" class = "nav-link">About Me</a>
+                    <a href = "#" class = "nav-link">Blog</a>
                 </ul>
             </div>
            
@@ -62,12 +62,12 @@
             <article id = "post">
                 <div class="text-heading text-center">
                     <div class="title normal-title text-color">
-                        JUl 14, 2022
+                        Puzzle #1
                     </div>
                     <div class="title">
                         <h2 class="text-title text-color display-2">
                             <br>
-                            Step into DayTrading
+                            ???
                         </h2>
                     </div>
                     <div class="meta">
@@ -75,7 +75,7 @@
                             <i class = "fas fa-user text-color"></i> Olivia
                         </a>
                         <a href="#" class = "link display-2 text-color px-1">
-                            <i class = "fas fa-clock text-color"></i> Thu Jul 14, 2022
+                            <i class = "fas fa-clock text-color"></i> Jul 1, 2022
                         </a>
                         <a href="#" class = "link display-2 text-color px-1">
                             <i class = "fas fa-comments text-color"></i> 9999
@@ -85,7 +85,7 @@
                 </div>
                 <!--thumbnail-->
                 <div class="thumbnail mt-3">
-                    <img src="../assets/image2.jpg" class = "thumbnail" alt="">
+                    <img src="../assets/image4.jpg" class = "thumbnail" alt="">
                 </div>
 
                 <!--post.content-->
@@ -94,26 +94,40 @@
                         ...
                 </div>
 
-                <div class="content text-color display-2 secondary-title mt-3">
+                <div class="content text-color question secondary-title mt-3">
                     <p>
-                        <span class="tab"></span> Today, I finished reading the book "How To Day Trading For A Living".
-                        We should treat everything like a trade, and never forget to do reflection after every trade,
-                        regardless of whether it is successful or not. I had better begin to do paper trading first, to
-                        learn how to operate my account and the "fake" tension. I gonna sign up an account this weekend, and
-                        continue to the next book for doing algorithmic trading by Python.<br>
+                        Puzzle: How many trailing zeros does 1000! have?<br>
                         <br>
-                        <span class="tab"></span> Trading is a comprehensive task, and each aspect is important.
-                        If I want to be a trader, there should not be the distinction "I can do it" and "I can't do it";
-                        the only difference should be "I can master that, but I can do this better". Never lie to myself, 
-                        and never try to expect something. <br>
                         <br>
-                        <span class="tab"></span> I should treat any company with the attitude of investing it while 
-                        thinking of the "why" question.<br>
                         <br>
-                        <span class="tab"></span> This weekend, I will study C from SCRATCH...<br> 
                         <br>
-                        <span class="tab"></span> I guess that these are enough for today?<br>
-                    
+
+                    </p>
+
+                    <p>
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                        - First, it is easy to find out that when 2 multiplies 5, 
+                        we will have a 10, which will add a trailing zero.<br><br>
+
+                        - At the same time, there are 1000 / 2 = 500 --> the number of 2's multiples in 1000,
+                        and 5's multiples must be smaller than this number, meaning that
+                        whenever once we find a multiple of 5, we can always pair it with 
+                        a number which can be split into 2 times something.<br><br>
+                        
+                        - We just need to count the number of 5's multiples, 100 / 5 = 200.<br><br>
+
+                        - However, we also know that 5*5 = 25, and 5*5*2 = 100 ---> we will have trailing
+                        zeros. <br><br>
+
+                        - How many numbers with more than one 5 included?<br><br>
+                        
+                        1000 / (5*5) = 40<br>
+                        1000 / (5*5*5) = 8<br>
+                        1000 / (5^4) = 1.6, and we count the integer 1, because we only have one 625.<br>
+
+                        - Adding them up, the answer is just 249.<br><br>
 
                     </p>
                 </div>
@@ -140,20 +154,20 @@
                     <div class="row justify-content-center">
                         <div class="prev">
                             <div class="py-2">
-                                <a href="july13.html" class="display-1 text-color">
+                                <a href="#" class="display-1 text-color">
                                     <i class="fas fa-chevron-left">
                                     </i>
-                                    Previous Post
+                                    Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
                                 </a>
                             </div>
                          </div>
                          <div class="next text-right">
                             <div class="py-2">
-                                <a href="july15.html" class="display-1 text-color" style="float:right">
-                                    Next Post
+                                <a href="2.html" class="display-1 text-color" style="float:right">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
                                     <i class="fas fa-chevron-right"></i>
-                                   
+                                    
                                 </a>
                             </div>
                          </div>

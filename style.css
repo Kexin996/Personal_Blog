@@ -117,6 +117,24 @@ a{
 {
     text-align: center;
 }
+.question
+{
+    font-size:30px;
+
+}
+
+.image-center
+{
+    height:750px;
+    width: 750px;
+    object-fit: fill;
+    border-radius: 375px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 .text-right
 {
@@ -220,10 +238,10 @@ a{
 
 .rounded
 {
-    height:120px;
-    width: 120px;
+    height:400px;
+    width: 400px;
     object-fit: fill;
-    border-radius: 99px;
+    border-radius: 200px;
 
 }
 
