@@ -112,15 +112,110 @@
                 </div>
                 <div class="content text-color display-1 secondary-title mt-3">
                     <p>
-                    - Note: the problem requires us to describe the pieces, meaning that the pieces cannot be similar to a slice of a pizza; it is not regular. <br><br>
+                    *** Note: this problem has a lot of variations, and it takes me a long time to truly understand
+                    some steps (I hope I understand it thoroughly) ***<br><br>
+
+                    - First of all, we can just disregard the condition that there is a ball a weight
+                    either heavier or lighter. <br>
+                    &emsp;&emsp; - we go back to the most basic form: how to find out the heavier ball in a set of balls?<br>
+                    &emsp;&emsp; - the most basic case would be that there are 3 balls, since with three balls we can use two balls as majority to compare the weight.<br>
+                    &emsp;&emsp; - we already know there is one heavier weight. Thus, it only takes 1 turn to find out the ball.<br><br>
+
+                    - How? <br>
+                    &emsp;&emsp; - we compare the first and the second ball. Once we find where the imbalance is, we just select the heaiver one as the answer.<br>
+                    &emsp;&emsp; - if they are equal, the last ball will be the heavier one.<br><br>
+
+                    - Oh that is quite simple, you may say, and it is easy to extend this relatonship to more balls: <br>
+                    &emsp;&emsp; - for 9 balls, we just need to see 3 balls as "1" ball, split them into three groups consisting of 3 balls, 
+                    and find the group with heaiver weight, one weighing.<br>
+                    &emsp;&emsp; - then, it is like recursion ---> we "inherit" the one weighing from the 3 balls base case, so we only need to weigh it one more times.<br>
+                    &emsp;&emsp; - the answer is 2 weighing.<br><br>
                     
-                    - We know that the sum from 1 to 12 is: 78, and the numbers on each piece sums is the same.<br>
-                    &emsp;&emsp; - 78 / 3 = 26, meaning that the sum of each piece should be 26. <br><br>
-                    - We also know that:
-                    <center>5+6+7+8 = 26, and 11+12+1+2 = 26, and the rest are discontinuous.</center><br>
-                    - We know that the three pieces should be like:<br><br>
-                    <img src="/puzzles/6.jpg" alt = "" class = "center" >
+                    - It is not difficult to extend it to other multiples of 3, like 27, 81, 243... the answer is just log<sub>3</sub>n, and n is the number.<br>
+                    &emsp;&emsp; - Note: here, log<sub>3</sub>n is the least number of weighing. If there are, for example, 8 balls, we still need to do 2 weighings. since 8 > 3.<br>
+                    &emsp;&emsp; - This rule can apply to find out the lighter ball too.<br><br>
+
+                    - That's nice. However, now we don't know whether the ball is heavier or lighter. What should we do?<br>
+                    &emsp;&emsp; - There are twelve balls. If we split them in a half, 6 balls vs. 6 balls, and then 3 balls vs. 3 balls, ... we will never know 
+                    which part is heavier or lighter in only 3 steps. One side can be light, but at the same time the other side can be heavier. <br><br>
+                    
+                    - What if we keep some parts the same in two comparisons, since they will act like a 'majority standard'? <br>
+                    &emsp;&emsp; - for example, we still split 12 balls into 3 groups, A,B,and C, but we just do cross comparsion.<br>
+                    &emsp;&emsp; - we use A to compare B first.<br>
+                    &emsp;&emsp; - If we do that, we will have three situations: <br>
+                    &emsp;&emsp; 1. A = B. <br>
+                    &emsp;&emsp;&emsp;&emsp; - that means that A, B are all standardized, and we need to check C.<br>
+                    &emsp;&emsp; 2. A > B | A < B. <br>
+                    &emsp;&emsp;&emsp;&emsp; - that means now we know where the imbalance is ---> A or B, but there are still too many probabilities.<br><br>
+
+                    - Now we get stuck. How do we know more information about A and B, while we can use the previous conclusion that we know one is heavier?<br>
+                    &emsp;&emsp; - we rotate the parts of the groups.<br>
+                    &emsp;&emsp; - we split A, B and C into {1,3}, {1,3} and {1,3} ---> two internal piles.<br>
+                    &emsp;&emsp; - we just use the 1 from group A combining with 3 from group B, and compare it to the 1 from group B pairing with the 3 from group C.<br><br>
+                    
+                    - Now we have three situations again. The 1,2,3 in the following denote the number of group, and A,B,C,D are the specific internal balls.<br>
+                    &emsp;&emsp; 1. {1A, 2B, 2C, 2D} = {2A, 3B, 3C, 3D} <br>
+                    &emsp;&emsp;&emsp;&emsp; - that means the strange ball only exists in {1B, 1C, 1D} <br>
+                    &emsp;&emsp;&emsp;&emsp; - in the previous step, we already know A > B or A < B.<br>
+                    &emsp;&emsp;&emsp;&emsp; - combining with this condition, for {1B, 1C, 1D}, we only need one weighing ---> we know this from the beginning. <br><br>
+                    &emsp;&emsp; 2. {1A, 2B, 2C, 2D} < {2A, 3B, 3C, 3D} <br>
+                    &emsp;&emsp;&emsp;&emsp; - if in the previous step, A > B, we know that know the sign reverses. <br>
+                    &emsp;&emsp;&emsp;&emsp; - 1A cannot be the odd, and 2A cannot be the odd either.<br>
+                    &emsp;&emsp;&emsp;&emsp; - If they have diferent weights, we will follow the same inequality. <br>
+                    &emsp;&emsp;&emsp;&emsp; - Combining with the previous step, the problem will be located to {2B,2C,2D} ---> they are smaller. <br><br>
+                    &emsp;&emsp;&emsp;&emsp; - but if sign doesn't change, we will know either 1A or 2A has problem, and the inequality in the last step has already told us the magnitude. <br>
+                    &emsp;&emsp;&emsp;&emsp; - we just use a ball we know is normal (e.g. a ball fro group 3) to compare it with one ball.<br><br>
+                    &emsp;&emsp; 3. {1A, 2B, 2C, 2D} <>{2A, 3B, 3C, 3D} <br>
+                    &emsp;&emsp; - it is just the same step as in 2, but the signs are reversed. <br><br>
+
+                    - Why do we split the pile into three piles?<br>
+                    &emsp;&emsp; - we still want to use the results when we know one is heavier, and we want to use them in a MAXIMUM level.<br>
+
+                    - Why do we split 4 into 1 and 3?<br>
+                    - we want to use our previous conclusion in a MAXIMUM level, so the subgroups must be a number in the geometric sequence of 3.<br><br>
+
                     <br><br>
+                    </p>
+                </div>
+                <div class="content text-color question secondary-title mt-3">
+                    *** Follow Up ***: <br><br>
+                    How many weighings we need for 90 coins?
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Solution:
+                </div>
+
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                    - Now it becomes clear. We want to use the multiples of 3, and the maximum we can get in this situation is 27, so we have four groups, three having 27 and one having 9. <br><br>
+                    
+                    - We still want to use log<sub>3</sub>n, so we just split 90 into 81 and 9.<br>
+
+                    - We denote the three groups as A, B, C, and D and we compare 27A and 27B, 27B and 27C. <br>
+                    &emsp;&emsp; 1. 27A = 27B, 27B = 27C <br>
+                    &emsp;&emsp; &emsp;&emsp; - the odd is in 9D.<br>
+                    &emsp;&emsp; &emsp;&emsp; - we use 9A to compare 9D, and then we will know the magnitude of 9D. Then, it only takes us 2 more weighings.<br><br>
+
+                    &emsp;&emsp; 2. 27A = 27B, 27B > 27C <br>
+                    &emsp;&emsp; &emsp;&emsp; - we know that 27C is smaller, and log<sub>3</sub>27 = 3, we need 3 more weighings.<br>
+                    &emsp;&emsp; &emsp;&emsp; - that also works for other situations, since in this way we will know the magnitude of the group containing the odd one.<br><br>
+
+                    - Thus, we need 5 weighings.<br><br>
+
+                    - Is there any other way to interpret? <br><br>
+                    - From my understanding, the least number of weighning can be done in this way: <br>
+                    &emsp;&emsp; - we just split them into three, and count the length of 3's geometric sequence. <br>
+                    &emsp;&emsp; - and we add 1 ---> because in the beginning we must do two comparisons before we enter the rotation recursion.<br>
+                    &emsp;&emsp; - we need something to compare, so we add 1 just to count the number of comparisons before the rotation.<br>
+                    &emsp;&emsp; - however, if we have remainders in the subgroup, that means the current count is not enough, and we add 1 too. <br>
+                    &emsp;&emsp; &emsp;&emsp; - e.g. 90 ---> we split it into 30, and 30 can be splited into {{1,3,9},17}, we are left with 17 coins, so we need len({1,3,9}) + 1 + 1 = 5 comparisons.<br><br>
+
+                    *** Note: I have written a simple code to generalize this problem. If you want to check, please
+                    click on this link: <br>
+                    <a href="https://github.com/Kexin996/brainteaser/blob/master/fake_coins.py" class = "nav-link">https://github.com/Kexin996/brainteaser/blob/master/fake_coins.py</a>
                     </p>
                 </div>
 
