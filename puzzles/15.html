@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kexin's Blog</title>
+
+    <!---font awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark">
+                Kexin
+            </a>
+
+            <!--toggle-->
+            <button class = "toggle-button">
+                <span><i class = "fas fa-bars"></i></span>
+            </button>
+         
+
+            <!--click-->
+            <div class = "collapse">
+                <ul class="navbar-nav">
+                    <a href = "/index.html" class = "nav-link">Home</a>
+                    <a href = "/puzzle.html" class = "nav-link">Puzzles</a>
+                    <a href = "#" class = "nav-link">Portfolio</a>
+                    <a href = "#" class = "nav-link">Projects</a>
+                    <a href = "#" class = "nav-link">Blog</a>
+                </ul>
+            </div>
+           
+            <div class = "collapse">
+                <ul class = "navbar-nav">
+                    <div class = "search-box">
+                        <a href = "/index.html" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                        <a href = "/puzzle.html" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-github"></i></a> 
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-weixin"></i></a>
+                        
+                </ul>
+            </div>
+        </nav>
+     </header>
+    <!-- .Header -->
+
+    <!--main site-->
+     <main id="site-main">
+
+        <!--post content-->
+           <section class="container">
+            <article id = "post">
+                <div class="text-heading text-center">
+                    <div class="title normal-title text-color">
+                        Puzzle #15
+                    </div>
+                    <div class="title">
+                        <h2 class="text-title text-color display-2">
+                            <br>
+                            ???
+                        </h2>
+                    </div>
+                    <div class="meta">
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-user text-color"></i> Olivia
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-clock text-color"></i> Jul 8, 2022
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-comments text-color"></i> 9999
+                        </a>
+                    </div>
+
+                </div>
+                <!--thumbnail-->
+                <div class="thumbnail mt-3">
+                    <img src="../assets/image3.jpg" class = "thumbnail" alt="">
+                </div>
+
+                <!--post.content-->
+                <div class="content text-color display-2 text-center">
+                    <br>
+                        ...
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "Your bedroom sock drawer contains eight red socks and 11 blue socks that are otherwise identical. The light is broken in your bedroom, and you must select your socks in the dark. What is the minimum number of socks you need to take out of your drawer and carry into your (well-lit) living room to guarantee that you have with you at least a matching pair to choose from?"
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We need to understand the sample space of the results and the worst case. <br>
+                        &emsp;&emsp; - matching pair ---> two socks with the same color<br>
+                        &emsp;&emsp; - at least one matching pair ---> number of matching pairs &ge; 1<br><br>
+
+                        - We need to find out where the number of matching pairs < 1<br>
+                        &emsp;&emsp; - we have 2 colors, red and blue in total. <br>
+                        &emsp;&emsp; - the worst case is that we want the existing socks that we pull out to have the same number but < 2 * the number of matching pairs <br>
+                        &emsp;&emsp;&emsp;&emsp; - e.g. R, B, all < 2 * 1 = 2 <br><br>
+                        
+                        - However, in this situation, the number of unchosen colors is 0 <br>
+                        &emsp;&emsp; - we reach the "limit" ---> so we need three pairs.<br>
+                        &emsp;&emsp; - generalize it ---> we need 3 socks. <br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        Follow Up: <br><br>
+                        &emsp;
+                        "Following on from the previous two questions, your bedroom sock drawer contains 2 red, 4 yellow, 6 purple, 8 brown, 10 white, 12 green, 14 black, 16 blue, 18 gray, and 20 orange socks. It is dark, so you cannot distinguish between the colors of the otherwise-identical socks. How many socks do you need to take out of the drawer to guarantee that you have at least three pairs of socks of the same color?"
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We still consider the worst case. <br>
+                        &emsp;&emsp; - the 3 pairs of socks all have the same color.<br><br>
+
+                        - First, we exclude red and yellow. red is 2, and yellow is 4.<br>
+                        &emsp;&emsp; - 2 + 4 = 6, and now we only have 8 colors.<br><br>
+                        
+                        - We follow the logic above: we want the number of pulling out socks of each color all becomes smaller than 3 * 2 = 6.<br>
+                        &emsp;&emsp; - thus, we want the number of each color to be 5.<br>
+                        &emsp;&emsp; - 5 * 8 = 40, and if we pull out one more, we will have 3 pairs of socks of the same color.<br><br>
+                        
+                        - Adding them up, we have: 40+6+1 = 47 socks. <br><br>
+
+                        *** Note: I have written a simple code to generalize this problem. If you want to check, please
+                        click on this link: <br>
+                        <a href="https://github.com/Kexin996/brainteaser/blob/master/july18.py" class = "nav-link">https://github.com/Kexin996/brainteaser/blob/master/july18.py</a>
+
+
+                        <br><br>
+                    </p>
+                </div>
+
+            </article>
+                <!--post footer-->
+
+                <div class="post-author text-center">
+                    <div class="author-avatar">
+                        <img src = "../assets/myself.jpg" class = "rounded" alt="">
+                    </div>
+
+                    <div class="author-info py-2 text-color">
+                        <h3>Kexin</h3>
+                        <p class="text-color secondary-title">
+                            NYU' 24<br>
+                            idle...
+                        </p>
+                    </div>
+                </div>
+                <!--.post footer-->
+
+                <!--post related-->
+                <div class="post-realted py-2">
+                    <div class="row justify-content-center">
+                        <div class="prev">
+                            <div class="py-2">
+                                <a href="14.html" class="display-1 text-color">
+                                    <i class="fas fa-chevron-left">
+                                    </i>
+                                    Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                                </a>
+                            </div>
+                         </div>
+                         <div class="next text-right">
+                            <div class="py-2">
+                                <a href="16.html" class="display-1 text-color" style="float:right">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
+                                    <i class="fas fa-chevron-right"></i>
+                                    
+                                </a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+            
+           </section>
+
+        <!--.post content-->
+
+        
+     </main>
+    <!--.main site-->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+              
+                    <h2 class = "footer-title third-title">About Me</h2>
+                    <div class="text-body">
+                        <p class = "display-1">
+                            More?
+                        </p>
+                        <address>
+                            <i class="fas fa-home-lg display-1"></i>
+                            Somewhere in NYC
+                        </address>
+
+                        <div class="phone">
+                            <i class="fas fa-phone display-1"></i>
+                            646-873-0726
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-at display-1"></i>
+                            kz2031@nyu.edu
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+        <!--copyright-->
+        <div class="copyrights text-color">
+            <p class="text-center text-secondary display-2">
+                @ 2022 <a href="#" class = "text-color">
+                    - Personal Blog. All rights are reserved.(actually I don't know what it means)
+                </a>
+            </p>
+        </div>
+
+    </fotter>
+    <!-- .footer-->
+    
+     <!--masonry-->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+      <!--main.js-->
+     <script src = '../main.js'></script>
+
+    </body>
+</html>

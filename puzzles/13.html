@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kexin's Blog</title>
+
+    <!---font awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark">
+                Kexin
+            </a>
+
+            <!--toggle-->
+            <button class = "toggle-button">
+                <span><i class = "fas fa-bars"></i></span>
+            </button>
+         
+
+            <!--click-->
+            <div class = "collapse">
+                <ul class="navbar-nav">
+                    <a href = "/index.html" class = "nav-link">Home</a>
+                    <a href = "/puzzle.html" class = "nav-link">Puzzles</a>
+                    <a href = "#" class = "nav-link">Portfolio</a>
+                    <a href = "#" class = "nav-link">Projects</a>
+                    <a href = "#" class = "nav-link">Blog</a>
+                </ul>
+            </div>
+           
+            <div class = "collapse">
+                <ul class = "navbar-nav">
+                    <div class = "search-box">
+                        <a href = "/index.html" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                        <a href = "/puzzle.html" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-github"></i></a> 
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href = "#" class = "nav-link"><i class="fa-brands fa-weixin"></i></a>
+                        
+                </ul>
+            </div>
+        </nav>
+     </header>
+    <!-- .Header -->
+
+    <!--main site-->
+     <main id="site-main">
+
+        <!--post content-->
+           <section class="container">
+            <article id = "post">
+                <div class="text-heading text-center">
+                    <div class="title normal-title text-color">
+                        Puzzle #13
+                    </div>
+                    <div class="title">
+                        <h2 class="text-title text-color display-2">
+                            <br>
+                            ???
+                        </h2>
+                    </div>
+                    <div class="meta">
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-user text-color"></i> Olivia
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-clock text-color"></i> Jul 7, 2022
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-comments text-color"></i> 9999
+                        </a>
+                    </div>
+
+                </div>
+                <!--thumbnail-->
+                <div class="thumbnail mt-3">
+                    <img src="../assets/image3.jpg" class = "thumbnail" alt="">
+                </div>
+
+                <!--post.content-->
+                <div class="content text-color display-2 text-center">
+                    <br>
+                        ...
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "How many degrees (if any) are there in the angle between the hour and minute hands of a clock when the time is a quarter past three?<br><br>
+                        What is the first time after 3pm when the hour and minute hands of a clock are exactly on top of each other?"
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We can easily determine the relationship between the speed of the hour and minute hands (in degrees):<br>
+                        &emsp;&emsp; - hour hand: (360 / 12) / 60 = 0.5 degree per min.<br>
+                        &emsp;&emsp; - minute hand: 360 / 60 = 6 degree per min. <br>
+                        - When the time is a quarter past three:<br>
+                        &emsp;&emsp; - hour hand (in degrees): 90 + 0.5 * 15 = 97.5 degrees. <br>
+                        &emsp;&emsp; - minute hand (in degrees): 15*6 = 90 degrees. <br>
+                        &emsp;&emsp; - their difference: 7.5 degrees. <br>
+                        <br>
+                        - We can generalize the formula for solving the second problem:<br>
+                        &emsp;&emsp; - let's time after 3 pm be t in minutes. <br>
+                        <center>90 + 0.5t = 6t</center>
+                        <center>t = 90 / 5.5 &#8776 16.3636 minutes</center>
+                        <br><br>
+                    </p>
+                </div>
+
+            </article>
+                <!--post footer-->
+
+                <div class="post-author text-center">
+                    <div class="author-avatar">
+                        <img src = "../assets/myself.jpg" class = "rounded" alt="">
+                    </div>
+
+                    <div class="author-info py-2 text-color">
+                        <h3>Kexin</h3>
+                        <p class="text-color secondary-title">
+                            NYU' 24<br>
+                            idle...
+                        </p>
+                    </div>
+                </div>
+                <!--.post footer-->
+
+                <!--post related-->
+                <div class="post-realted py-2">
+                    <div class="row justify-content-center">
+                        <div class="prev">
+                            <div class="py-2">
+                                <a href="12.html" class="display-1 text-color">
+                                    <i class="fas fa-chevron-left">
+                                    </i>
+                                    Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                                </a>
+                            </div>
+                         </div>
+                         <div class="next text-right">
+                            <div class="py-2">
+                                <a href="14.html" class="display-1 text-color" style="float:right">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
+                                    <i class="fas fa-chevron-right"></i>
+                                    
+                                </a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+            
+           </section>
+
+        <!--.post content-->
+
+        
+     </main>
+    <!--.main site-->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+              
+                    <h2 class = "footer-title third-title">About Me</h2>
+                    <div class="text-body">
+                        <p class = "display-1">
+                            More?
+                        </p>
+                        <address>
+                            <i class="fas fa-home-lg display-1"></i>
+                            Somewhere in NYC
+                        </address>
+
+                        <div class="phone">
+                            <i class="fas fa-phone display-1"></i>
+                            646-873-0726
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-at display-1"></i>
+                            kz2031@nyu.edu
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+        <!--copyright-->
+        <div class="copyrights text-color">
+            <p class="text-center text-secondary display-2">
+                @ 2022 <a href="#" class = "text-color">
+                    - Personal Blog. All rights are reserved.(actually I don't know what it means)
+                </a>
+            </p>
+        </div>
+
+    </fotter>
+    <!-- .footer-->
+    
+     <!--masonry-->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+      <!--main.js-->
+     <script src = '../main.js'></script>
+
+    </body>
+</html>
