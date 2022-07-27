@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kexin's Blog</title>
+
+    <!---font awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark">
+                Kexin
+            </a>
+
+            <!--toggle-->
+            <button class = "toggle-button">
+                <span><i class = "fas fa-bars"></i></span>
+            </button>
+         
+
+            <!--click-->
+            <div class = "collapse">
+                <ul class="navbar-nav">
+                    <a href = "/index.html" class = "nav-link">Home</a>
+                    <a href = "/puzzle.html" class = "nav-link">Puzzles</a>
+                    <a href = "/portfolio.html" class = "nav-link">Portfolio</a>
+                    <a href = "/projects.html" class = "nav-link">Projects</a>
+                    <a href = "/more.html" class = "nav-link">More</a>
+                </ul>
+            </div>
+           
+            <div class = "collapse">
+                <ul class = "navbar-nav">
+                    <div class = "search-box">
+                        <a href = "#" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                        <a href = "https://www.linkedin.com/in/kexin-zhang-0570961b7" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href = "https://github.com/Kexin996" class = "nav-link"><i class="fa-brands fa-github"></i></a> 
+                        <a href = "https://www.instagram.com/olivia4ever_/" class = "nav-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href = "weixin://dl/chat?{Linjinyo}" class = "nav-link"><i class="fa-brands fa-weixin"></i></a>   
+                </ul>
+            </div>
+        </nav>
+     </header>
+    <!-- .Header -->
+
+    <!--main site-->
+     <main id="site-main">
+
+        <!--post content-->
+           <section class="container">
+            <article id = "post">
+                <div class="text-heading text-center">
+                    <div class="title normal-title text-color">
+                        Small Puzzles Collection #1
+                    </div>
+                    <div class="title">
+                        <h2 class="text-title text-color display-2">
+                            <br>
+                            ???
+                        </h2>
+                    </div>
+                    <div class="meta">
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-user text-color"></i> Olivia
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-clock text-color"></i> Jul 9, 2022
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-comments text-color"></i> 9999
+                        </a>
+                    </div>
+
+                </div>
+                <!--thumbnail-->
+                <div class="thumbnail mt-3">
+                    <img src="../assets/image3.jpg" class = "thumbnail" alt="">
+                </div>
+
+                <!--post.content-->
+                <div class="content text-color display-2 text-center">
+                    <br>
+                        ...
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "you are a prisoner in a foreign land. your fate will be determined by a little game. there are two jars, one with 50 white marbles, and one with 50 black marbles. at this point, you are allowed to redistribute the marbles however you wish (e.g. swap a black marble with a white marble, etc.): the only requirement is that after you are done with the redistribution, every marble must be in one of the two jars. afterwards, both jars will be shaken up, and you will be blindfolded and presented with one of the jars at random. then you pick one marble out of the jar given to you. if the marble you pull out is white, you live; if black, you die. how should you redistribute the marbles to maximize the probability that you live; what is this maximum probability (roughly)?"
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - First, we know that we cannot change the probability of choosing the jars. <br>
+                        &emsp;&emsp; - that is, since there are two jars, choosing either will always be 50/50. <br>
+                        &emsp;&emsp; - therefore, we want to maximize the probability of getting white in jars 1 and 2. <br><br>
+                        
+                        - The maximum probability is 1 ---> we can just put one white marble in a jar.<br><br>
+
+                        - Then, we put the rest of the white marbles into the jar full of black marbles, and the final probability becomes:<br>
+                            <center>P(white) = 0.5 * 1+ 0.5 * (49 / 99), which is roughly 75%.</center>
+             
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "An Arab sheikh is old and must will his fortune to one of his two sons. He makes a proposition. His two sons will ride their camels in a race, and whichever camel crosses the finish line last will win the fortune for its owner. During the race, the two brothers wander aimlessly for days, neither willing to cross the finish line. In desperation, they ask a wise man for advice. He tells them something; then the brothers leap onto the camels and charge toward the finish line. What did the wise man say?"
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - we look at the keywords: their camels, last will win. <br>
+                        &emsp;&emsp; - to make the two sons ride toward the finish line, the old just tells them to switch the horses. <br>
+                        &emsp;&emsp; - thus, if either one crosses the line first, he will win ---> his own horse will be the one to be the last.
+             
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "There are 3 black hats and 2 white hats in a box. Three men (we will call them A, B, & C) each reach into the box and place one of the hats on his own head. They cannot see what color hat they have chosen. The men are situated in a way that A can see the hats on B & C's heads, B can only see the hat on C's head and C cannot see any hats. When A is asked if he knows the color of the hat he is wearing, he says no. When B is asked if he knows the color of the hat he is wearing he says no. When C is asked if he knows the color of the hat he is wearing he says yes and he is correct. What color hat and how can this be?"
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We begin with A, and keep in mind that there are three black hats and two white hats.<br>
+                        &emsp;&emsp; - A can see B,C's hats, and A doesn't know the color of his own hat.<br>
+                        &emsp;&emsp; - A doesn't know ---> A can wear either black or white.<br>
+                        &emsp;&emsp; - B,C : <br>
+                        &emsp;&emsp;1. all black hats <br>
+                        &emsp;&emsp;2. one white, one black<br><br>
+
+                        - We move to B.<br>
+                        &emsp;&emsp; - B knows C, but B doesn't know his own hat either. <br>
+                        &emsp;&emsp; - when hearing that A doesn't know, B knows the two situations above.<br>
+                        &emsp;&emsp; - if C wears a black hat, B himself can either be white or black.<br><br>
+
+                        - Thus, C wears a black hat.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "One train leaves Los Angeles at 15mph heading for New York. Another train leaves from New York at 20mph heading for Los Angeles on the same track. The distance between LA and NY is about 5000 miles. If a bird, flying at 25mph, leaves from Los Angeles at the same time as the train and flies back and forth between the two trains until they collide, how far will the bird have traveled? "
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We still need to look at some constants in the problem, since we cannot calculate the bird's distance every time. <br><br>
+
+                        - We know that distance = time * velocity and the time in this problem is 'constant' ---> it is shared among train 1, train 2, and the bird. <br>
+                        &emsp;&emsp; - the time two trains take to meet = the time the bird flies.<br><br>
+
+                        - Thus, once we know the time when the two trains meet, we can solve this problem.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "scientific studies have shown that there is a direct, positive correlation between foot size and performance in spelling bees / spelling tests. how can you explain this correlation?"
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - The correlation is simple since foot size represents a person's growth. An adult will always know more than a baby.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+          
+          
+
+            </article>
+                <!--post footer-->
+
+                <div class="post-author text-center">
+                    <div class="author-avatar">
+                        <img src = "../assets/myself.jpg" class = "rounded" alt="">
+                    </div>
+
+                    <div class="author-info py-2 text-color">
+                        <h3>Kexin</h3>
+                        <p class="text-color secondary-title">
+                            NYU' 24<br>
+                            idle...
+                        </p>
+                    </div>
+                </div>
+                <!--.post footer-->
+
+                <!--post related-->
+                <div class="post-realted py-2">
+                    <div class="row justify-content-center">
+                        <div class="prev">
+                            <div class="py-2">
+                                <a href="17.html" class="display-1 text-color">
+                                    <i class="fas fa-chevron-left">
+                                    </i>
+                                    Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                                </a>
+                            </div>
+                         </div>
+                         <div class="next text-right">
+                            <div class="py-2">
+                                <a href="19.html" class="display-1 text-color" style="float:right">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
+                                    <i class="fas fa-chevron-right"></i>
+                                    
+                                </a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+            
+           </section>
+
+        <!--.post content-->
+
+        
+     </main>
+    <!--.main site-->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+              
+                    <h2 class = "footer-title third-title">About Me</h2>
+                    <div class="text-body">
+                        <p class = "display-1">
+                            More?
+                        </p>
+                        <address>
+                            <i class="fas fa-home-lg display-1"></i>
+                            Somewhere in NYC
+                        </address>
+
+                        <div class="phone">
+                            <i class="fas fa-phone display-1"></i>
+                            646-873-0726
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-at display-1"></i>
+                            kz2031@nyu.edu
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+        <!--copyright-->
+        <div class="copyrights text-color">
+            <p class="text-center text-secondary display-2">
+                @ 2022 <a href="#" class = "text-color">
+                    - Personal Blog. All rights are reserved.(actually I don't know what it means)
+                </a>
+            </p>
+        </div>
+
+    </fotter>
+    <!-- .footer-->
+    
+     <!--masonry-->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+      <!--main.js-->
+     <script src = '../main.js'></script>
+
+    </body>
+</html>
