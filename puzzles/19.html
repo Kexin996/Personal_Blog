@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kexin's Blog</title>
+
+    <!---font awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark">
+                Kexin
+            </a>
+
+            <!--toggle-->
+            <button class = "toggle-button">
+                <span><i class = "fas fa-bars"></i></span>
+            </button>
+         
+
+            <!--click-->
+            <div class = "collapse">
+                <ul class="navbar-nav">
+                    <a href = "/index.html" class = "nav-link">Home</a>
+                    <a href = "/puzzle.html" class = "nav-link">Puzzles</a>
+                    <a href = "/portfolio.html" class = "nav-link">Portfolio</a>
+                    <a href = "/projects.html" class = "nav-link">Projects</a>
+                    <a href = "/more.html" class = "nav-link">More</a>
+                </ul>
+            </div>
+           
+            <div class = "collapse">
+                <ul class = "navbar-nav">
+                    <div class = "search-box">
+                        <a href = "#" class = "nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                        <a href = "https://www.linkedin.com/in/kexin-zhang-0570961b7" class = "nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href = "https://github.com/Kexin996" class = "nav-link"><i class="fa-brands fa-github"></i></a> 
+                        <a href = "https://www.instagram.com/olivia4ever_/" class = "nav-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href = "weixin://dl/chat?{Linjinyo}" class = "nav-link"><i class="fa-brands fa-weixin"></i></a>   
+                </ul>
+            </div>
+        </nav>
+     </header>
+    <!-- .Header -->
+
+    <!--main site-->
+     <main id="site-main">
+
+        <!--post content-->
+           <section class="container">
+            <article id = "post">
+                <div class="text-heading text-center">
+                    <div class="title normal-title text-color">
+                        Small Puzzles Collection 2
+                    </div>
+                    <div class="title">
+                        <h2 class="text-title text-color display-2">
+                            <br>
+                            ???
+                        </h2>
+                    </div>
+                    <div class="meta">
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-user text-color"></i> Olivia
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-clock text-color"></i> Jul 10, 2022
+                        </a>
+                        <a href="#" class = "link display-2 text-color px-1">
+                            <i class = "fas fa-comments text-color"></i> 9999
+                        </a>
+                    </div>
+
+                </div>
+                <!--thumbnail-->
+                <div class="thumbnail mt-3">
+                    <img src="../assets/image2.jpg" class = "thumbnail" alt="">
+                </div>
+
+                <!--post.content-->
+                <div class="content text-color display-2 text-center">
+                    <br>
+                        ...
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "you have two ropes, each of which takes one hour to burn completely. both of these ropes are nonhomogeneous in thickness, meaning that some parts of the ropes are chunkier than other parts of the rope. using these nonhomogeneous ropes and a lighter, time 45 minutes.
+                        <br><br><br>
+                        &emsp;
+                        Note: Some clarification on what is meant by nonhomogeneous. For instance, maybe a particular section of rope that is 1/8 of the total length is really chunky, and takes 50 minutes to burn off. then it would take 10 minutes to burn off the remaning 7/8, since we know that the whole rope takes an hour to burn off. that's just an example; we don't know any such ratios beforehand. The point is, if you look at one of your ropes and cut it into pieces, you have no clue how long any individual piece will take to burn off."                        
+                        
+                                            
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - The key point is still to find the relationship between different variables. <br><br>
+
+                        - We know: <br>
+                        &emsp;&emsp; - both ropes will burn for 60 mins in total.<br>
+                        &emsp;&emsp; - they are not homogeneous. <br><br>
+
+                        - The only thing we can control and make sure is the burning time, not their lengths after burning.<br><br>
+
+                        - Thus, what if we burn both sides of a rope?<br>
+                        &emsp; &emsp; - we will approximately count 30 mins, since if we burn one side, it will take 1 hour, and burning two sides imply its half ---> 30 mins. <br><br>
+
+                        - 45 mins consist of 30 mins and 15 mins, and 15 mins is just a half of 30 mins. <br><br>
+
+                        - Thus, the 45 mins will take two rounds:<br>
+                        &emsp;&emsp; - first, we just burning two sides of one rope, and one side of the other. <br>
+                        &emsp;&emsp; - 30 mins later, the two sides burning rope will be burned out, but the one side rope will still have 30 mins to burn. <br>
+                        &emsp;&emsp; - second, we burn two sides of the one side rope ---> burning two sides only takes half of the time burnning only one side.<br>
+                        &emsp;&emsp; - when it has been burned out, we just count 15 mins. <br><br>
+
+                        - Adding them up, we easily get 30 + 15 = 45 mins.<br><br>
+             
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "Tom is hanging out on a heavily forested island that's really narrow: it's a narrow strip of land that's ten miles long. let's label one end of the strip A, and the other end B. a fire has started at A, and the fire is moving toward B at the rate of 1 mph. at the same time, there's a 2 mph wind blowing in the direction from A toward B. what can Tom do to save himself from burning to death?! assume that Tom can't swim and there are no boats, jetcopters, teleportation devices, etc.. (if he does nothing, willywu will be toast after at most 10 hours, since 10 miles / 1 mph = 10 hours) "
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        *** This puzzle teaches me what is "jumping out of the box".<br><br>
+
+                        - What is we just burning the place where Tom stands when the fire begins to expand?<br><br>
+                        &emsp;&emsp; - Why?<br>
+                        &emsp;&emsp; - since the wind condition cannot be useless as it apppears in the question.<br>
+                        &emsp;&emsp; - we cannot swim... we must stay in the island! <br><br>
+
+                        - The wind speed is bigger than that of the fire, meaning that before the fire reaches where Tom stands, the new fire will burn out anything forward if we think of the island as a strip. <br><br>
+
+                        - When the fire arrives at Tom's place, there is nothing left for the fire to burn.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "you have 20 coin machines, each of which produce the same kind of coin. you know how much a coin is supposed to weigh. one of the machines is defective, in that every coin it produces weighs 1 ounce less than it is supposed to. you also have an electronic weighing machine. how can you determine which of the 20 machines is defective with only one weighing? (by one use, we mean you put a bunch of stuff on the machine and read a number, and that's it -- you not allowed to accumulate weight onto the machine and watch the numbers ascend, because that's just like multiple weighings). you are allowed to crank out as many coins from each machine as you like."
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - This problem is similar to the coin weighing problems we have seen before, but that is much easier ---> we can take as many coins as possible. <br><br>
+
+                        - That means, we can actually make each machine "weighted" ---> the multiple of the defect coins will imply its position.<br>
+                        &emsp;&emsp; - for example, if the final results is 3,
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "One train leaves Los Angeles at 15mph heading for New York. Another train leaves from New York at 20mph heading for Los Angeles on the same track. The distance between LA and NY is about 5000 miles. If a bird, flying at 25mph, leaves from Los Angeles at the same time as the train and flies back and forth between the two trains until they collide, how far will the bird have traveled? "
+                        
+                    
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - We still need to look at some constants in the problem, since we cannot calculate the bird's distance every time. <br><br>
+
+                        - We know that distance = time * velocity and the time in this problem is 'constant' ---> it is shared among train 1, train 2, and the bird. <br>
+                        &emsp;&emsp; - the time two trains take to meet = the time the bird flies.<br><br>
+
+                        - Thus, once we know the time when the two trains meet, we can solve this problem.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+                <div class="content text-color question secondary-title mt-3">
+                    <p>
+                        Puzzle: <br><br>
+                        &emsp;
+                        "scientific studies have shown that there is a direct, positive correlation between foot size and performance in spelling bees / spelling tests. how can you explain this correlation?"
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </p>
+
+                        Solution: <br>
+                </div>
+                <div class="content text-color display-1 secondary-title mt-3">
+                    <p>
+                        - The correlation is simple since foot size represents a person's growth. An adult will always know more than a baby.<br><br>
+
+                        <br><br>
+                    </p>
+                </div>
+
+          
+          
+
+            </article>
+                <!--post footer-->
+
+                <div class="post-author text-center">
+                    <div class="author-avatar">
+                        <img src = "../assets/myself.jpg" class = "rounded" alt="">
+                    </div>
+
+                    <div class="author-info py-2 text-color">
+                        <h3>Kexin</h3>
+                        <p class="text-color secondary-title">
+                            NYU' 24<br>
+                            idle...
+                        </p>
+                    </div>
+                </div>
+                <!--.post footer-->
+
+                <!--post related-->
+                <div class="post-realted py-2">
+                    <div class="row justify-content-center">
+                        <div class="prev">
+                            <div class="py-2">
+                                <a href="18.html" class="display-1 text-color">
+                                    <i class="fas fa-chevron-left">
+                                    </i>
+                                    Previous Post&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                                </a>
+                            </div>
+                         </div>
+                         <div class="next text-right">
+                            <div class="py-2">
+                                <a href="20.html" class="display-1 text-color" style="float:right">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;Next Post
+                                    <i class="fas fa-chevron-right"></i>
+                                    
+                                </a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+            
+           </section>
+
+        <!--.post content-->
+
+        
+     </main>
+    <!--.main site-->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+              
+                    <h2 class = "footer-title third-title">About Me</h2>
+                    <div class="text-body">
+                        <p class = "display-1">
+                            More?
+                        </p>
+                        <address>
+                            <i class="fas fa-home-lg display-1"></i>
+                            Somewhere in NYC
+                        </address>
+
+                        <div class="phone">
+                            <i class="fas fa-phone display-1"></i>
+                            646-873-0726
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-at display-1"></i>
+                            kz2031@nyu.edu
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+        <!--copyright-->
+        <div class="copyrights text-color">
+            <p class="text-center text-secondary display-2">
+                @ 2022 <a href="#" class = "text-color">
+                    - Personal Blog. All rights are reserved.(actually I don't know what it means)
+                </a>
+            </p>
+        </div>
+
+    </fotter>
+    <!-- .footer-->
+    
+     <!--masonry-->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+      <!--main.js-->
+     <script src = '../main.js'></script>
+
+    </body>
+</html>
